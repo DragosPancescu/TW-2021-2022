@@ -8,17 +8,27 @@
     <meta name="description" content="Magazin de jocuri/console retro.">
     <meta name="keywords" content="jocuri, retro, console, sega, nintendo">
     <meta name="author" content="Pancescu Dragos">
-    <link rel="icon" type="image/png" href="favicon.png">
-    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/png" href="/Images/favicon.png">
+    <link rel="stylesheet" href="/Styles/remove_css.css">
+    <link rel="stylesheet" href="/Styles/style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" rel="stylesheet"  type='text/css'>
     <title>Retro Point</title>
 </head>
 
 <body>
 
     <div id="container">
-        <header>
+        <header id="top">
+            <h1>Retro Point</h1>
             <nav id="navigation">
-                <h1>Retro Point</h1>
+                
+                <input type="checkbox" id="activate-menu">
+                <label for="activate-menu">
+                    <div class="hamburger">
+                        <i class="fas fa-bars"></i>
+                    </div>
+                </label>
+
                 <ul class="main-menu">
                     <li>
                         <div id="acasa">Acasa</div>
@@ -157,36 +167,52 @@
 
         </section>
 
-        <section id="lorem">
+        <section id="lorem1">
             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nulla sapiente vero commodi ratione odit dolorum dicta ipsa amet dolore reprehenderit ipsum, corporis quibusdam provident deserunt ducimus perferendis labore aut. Itaque.
         </section>
 
-        <fieldset>
-            <legend>Ore de lucru</legend>
+        <section id="lorem2">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nulla sapiente vero commodi ratione odit dolorum dicta ipsa amet dolore reprehenderit ipsum, corporis quibusdam provident deserunt ducimus perferendis labore aut. Itaque.
+        </section>
 
-            <table>
-                <tr>
-                    <th>Luni</th>
-                    <th>Marti</th>
-                    <th>Miercuri</th>
-                    <th>Joi</th>
-                    <th>Vineri</th>
-                    <th>Sambata/Duminica</th>
-                </tr>
+        <section id="lorem3">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nulla sapiente vero commodi ratione odit dolorum dicta ipsa amet dolore reprehenderit ipsum, corporis quibusdam provident deserunt ducimus perferendis labore aut. Itaque.
+        </section>
 
-                <tr>
-                    <td>8:00 - 19:00</td>
-                    <td>8:00 - 19:00</td>
-                    <td>8:00 - 19:00</td>
-                    <td>8:00 - 19:00</td>
-                    <td>10:00 - 19:00</td>
-                    <td>10:00 - 16:00</td>
-                </tr>
-            </table>
-        </fieldset>
+        <section id="lorem4">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nulla sapiente vero commodi ratione odit dolorum dicta ipsa amet dolore reprehenderit ipsum, corporis quibusdam provident deserunt ducimus perferendis labore aut. Itaque.
+        </section>
+
+        <section id="lorem5">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nulla sapiente vero commodi ratione odit dolorum dicta ipsa amet dolore reprehenderit ipsum, corporis quibusdam provident deserunt ducimus perferendis labore aut. Itaque.
+        </section>
+
+        
+
+        <table id="orar">
+            <tr>
+                <th>Luni</th>
+                <th>Marti</th>
+                <th>Miercuri</th>
+                <th>Joi</th>
+                <th>Vineri</th>
+                <th>Sambata/Duminica</th>
+            </tr>
+
+            <tr>
+                <td>8:00 - 19:00</td>
+                <td>8:00 - 19:00</td>
+                <td>8:00 - 19:00</td>
+                <td>8:00 - 19:00</td>
+                <td>10:00 - 19:00</td>
+                <td>10:00 - 16:00</td>
+            </tr>
+        </table>
 
         <footer>
-            <a href="#navigation">La inceputul paginii.</a><br>
+            <a href="#top" id="link-top" title="Scroll to top">
+                &#5123<div id="triunghi"></div>
+            </a>
 
             <address>
                 <a href="mailto:retro_point@mail.com">retro_point@mail.com</a><br>
