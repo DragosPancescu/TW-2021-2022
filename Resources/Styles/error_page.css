@@ -1,0 +1,7 @@
+h1.error-message {
+    font-size: 60px;
+    background-color: none;
+    width: max-content;
+    padding: 30px;
+    margin: 60px 0 25px 15px;
+}

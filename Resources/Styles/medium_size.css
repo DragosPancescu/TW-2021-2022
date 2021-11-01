@@ -1,0 +1,33 @@
+@media screen and (max-width: 800px) and (min-width: 500px){
+    #container {
+        grid-template-areas: "gr-header gr-header"
+                             "gr-despre gr-despre"
+                             "gr-livrare-returnare gr-orar"
+                             "gr-lorem2 gr-lorem1"
+                             "gr-lorem2 gr-lorem3"
+                             "gr-lorem2 gr-lorem3"
+                             "gr-lorem4 gr-date-utilizator"
+                             "gr-footer gr-footer";
+    }
+
+    ul.main-menu li{
+        text-align: center;
+        width: 8em;
+        height: 2.5em;
+        line-height: 2.2em;
+        
+    }
+
+    ul.main-menu li a, ul.main-menu li div {
+        font-size: 1em;
+        width: 8em;
+        display: flex;
+        justify-content: center;
+    }
+
+    #link-top {
+        height: 30px;
+        width: 30px;
+        font-size: 20px;
+    }
+}

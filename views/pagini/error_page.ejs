@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include("../fragmente/head.ejs") %>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/Resources/Styles/error_page.css">
+    <title>Error<% if (error_type == 404) { %> 404<% } %></title>
+</head>
+<body>
+    <div id="container">
+        <%- include("../fragmente/header.ejs") %>
+        <h1 class="error-message">Error <%- error_type %></h1>
+        <%- include("../fragmente/footer.ejs") %>
+    </div>
+</body>
+</html>

@@ -1,0 +1,19 @@
+{
+  "name": "retro-point",
+  "version": "1.0.0",
+  "description": "Magazinul RetroPoint",
+  "main": "index.js",
+  "keywords": [
+    "nintendo",
+    "sega",
+    "retro",
+    "console"
+  ],
+  "author": "Dragos Pancescu",
+  "dependencies": {
+    "daemon": "^1.1.0",
+    "ejs": "^3.1.6",
+    "express": "^4.17.1",
+    "serve-favicon": "^2.5.0"
+  }
+}

@@ -1,0 +1,115 @@
+:root {
+    --nav-text-color: #F7F6F2;
+    --nav-alt-text-color: #4B6587;
+    --nav-bg-color: #4B6587;
+    --nav-alt-bg-color: #F7F6F2;
+}
+
+#navigation {
+    background-color: var(--nav-bg-color);
+    position: fixed;
+    height: 2.5em;
+    width: 100%;
+    top: 0;
+    right: 0;
+    text-align: left;
+    display: flex;
+}
+
+#navigation ul, #navigation li, #navigation a, #navigation, #navigation div {
+    padding: 0;
+    margin: 0;
+}
+
+ul.main-menu li{
+    box-sizing: border-box;
+    text-align: center;
+    width: 13em;
+    height: 2.5em;
+    list-style-type: none;
+    float: left;
+    background-color: var(--nav-bg-color);
+    line-height: 2.2em;
+}
+
+ul.main-menu{
+    float: right;
+}
+
+ul.main-menu ul {
+    display: none;
+}
+
+ul.main-menu>li:hover>ul{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    animation: pulse 400ms;
+}
+
+ul.main-menu>li li:hover>ul{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    left: 100%;
+    top: -100%;
+    animation: pulse 400ms;
+}
+
+ul.main-menu li:hover>div, ul.main-menu li:hover>a{
+    background-color: var(--nav-text-color);
+    color: var(--nav-bg-color);
+    animation: fade_in 400ms;
+}
+
+ul.main-menu li a, ul.main-menu li div {
+    text-decoration: none;
+    color: var(--nav-text-color);
+    font-size: 1.3em;
+    width: 12.5em;
+    display: block;
+    width: 10em;
+    height: 100%;
+}
+
+.hamburger {
+    display: none;
+    position: fixed;
+    color: var(--nav-text-color);
+    font-size: 2em;
+    padding: 1em;
+}
+
+#activate-menu {
+    display: none;
+}
+
+#activate-menu:checked ~ ul.main-menu{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    top: 2.5em;
+    animation: pulse 400ms;
+}
+
+@keyframes pulse{
+    from {
+        transform: scale(0);
+    }
+    
+    to {
+        transform: scale(1);
+    }
+}
+
+@keyframes fade_in {
+    from {
+        background-color: var(--nav-bg-color);
+        color: var(--nav-text-color);
+    }
+    
+    to {
+        background-color: var(--nav-alt-bg-color);
+        color: var(--nav-alt-text-color);
+    }
+}

@@ -1,0 +1,31 @@
+@media screen and (max-width: 500px){
+
+    ul.main-menu{
+        display: none;
+    }
+
+    .hamburger {
+        display: block;
+    }
+
+    #container {
+        display: block;
+    }
+
+    ul.main-menu>li:hover>ul{
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        animation: pulse 400ms;
+        left: 7.2em;
+        top: -2.5em;
+    }
+
+    ul.main-menu li{
+        width: 7.2em;
+    }
+
+    ul.main-menu li a, ul.main-menu li div {
+        width: 7.2em;
+    }
+}
