@@ -92,6 +92,10 @@ ul.main-menu li a, ul.main-menu li div {
     animation: pulse 400ms;
 }
 
+#activate-menu:checked .hamburger {
+    animation: pulse 400ms;
+}
+
 @keyframes pulse{
     from {
         transform: scale(0);

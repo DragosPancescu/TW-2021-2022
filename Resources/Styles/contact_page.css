@@ -1,0 +1,51 @@
+:root {
+    --background-color: #F7F6F2;
+    --form-background-color: #C8C6C6;
+    --label-color: #3D526E;
+    --placeholder-color: #4B6587;
+}
+
+#container {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--background-color);
+}
+
+h2 {
+    font-size: 2em;
+    padding: 30px;
+}
+
+#contact_form {
+    display: flex;
+    flex-direction: column;
+    padding: 30px;
+    width: 20em;
+    height: 25em;
+    background-color: var(--form-background-color);
+    border-radius: 10px;
+    margin-left: 30px;
+}
+
+.form-style input[type="text"],
+.form-style input[type="email"],
+.form-style textarea {
+    background-color: var(--background-color);
+    color: var(--placeholder-color);
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 5px;
+}
+
+.form-style input[type="submit"] {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 50%;
+}
+
+.form-style label {
+    display: block;
+}

@@ -1,7 +1,21 @@
-h1.error-message {
-    font-size: 60px;
-    background-color: none;
-    width: max-content;
-    padding: 30px;
-    margin: 60px 0 25px 15px;
+:root {
+    --h-color: #3D526E;
+}
+
+.error-message {
+    display: flex;
+    flex-direction: row;
+    padding-bottom: 1em;
+}
+
+.error-image {
+    height: 20em;
+    width: 20em;
+}
+
+.error-message h2 {
+    font-size: 3em;
+    padding-top: 3em;
+    padding-left: 1em;
+    color: var(--h-color);
 }

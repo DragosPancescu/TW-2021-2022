@@ -1,12 +1,11 @@
 :root {
-    --link-top-color: #4B6587;
-    --link-top-bg-color: #F7F6F2;
     --h1-color: #3D526E;
     --h1-bg-color: #C8C6C6;
 }
 
 #container {
     display: grid;
+    position: relative;
     grid-template-areas: "gr-header gr-header gr-header gr-header"
                          "gr-despre gr-despre gr-despre gr-despre"
                          "gr-livrare-returnare  gr-orar gr-orar gr-lorem1"
@@ -16,35 +15,84 @@
 }
 
 #despre {
+    display: flex;
+    flex-direction: column;
     grid-area: gr-despre;
+    font-family: 'Nunito', sans-serif;
+    font-size: 1.2em;
+    padding: 1em;
+    text-align: justify;
+}
+
+#despre h2{
+    font-size: 1.4em;
+    padding-bottom: 0.3em;
+}
+
+#despre .cite-style{
+    padding-top: 0.4em;
+    font-style: italic;
+    font-size: 0.9em;
+    align-items: center;
+    justify-content: center;
+}
+
+#despre .cite-style details{
+    font-size: 0.9em;
+}
+
+#despre .cite-style details > summary{
+    padding: 0.2em;
+    list-style: none;
+}
+
+#despre .cite-style details > summary:hover {
+    cursor: pointer;
+}
+
+#despre .cite-style details > p{
+    padding: 0.2em;
+    width: 40em;
+    height: 5em;
+}
+
+#despre .cite-style details > p a{
+    text-decoration: none;
 }
 
 #livrare_returnare {
     grid-area: gr-livrare-returnare;
+    padding: 1em;
 }
 
 #lorem1 {
     grid-area: gr-lorem1;
+    padding: 1em;
 }
 
 #lorem2 {
     grid-area: gr-lorem2;
+    padding: 1em;
 }
 
 #lorem3 {
     grid-area: gr-lorem3;
+    padding: 1em;
 }
 
 #lorem4 {
     grid-area: gr-lorem4;
+    padding: 1em;
 }
 
 #date-utilizator {
     grid-area: gr-date-utilizator;
+    padding: 1em;
 }
 
 #orar {
     grid-area: gr-orar;
+    padding: 1em;
 }
 
 header {
@@ -55,10 +103,7 @@ header {
 
 footer {
     grid-area: gr-footer;
-}
-
-#container>*{
-    border: 1px solid black;
+    padding: 1em;
 }
 
 h1 {
@@ -69,29 +114,4 @@ h1 {
     padding: 30px;
     margin: 60px 0 25px 15px;
     border-radius: 45px 0 45px 0;
-}
-
-#link-top {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: fixed;
-    bottom: 10px;
-    right: 10px;
-    height: 40px;
-    width: 40px;
-    border: 3px solid var(--link-top-color);
-    border-radius: 30px;
-    background-color: var(--link-top-bg-color);;
-    text-decoration: none;
-    color: var(--link-top-color);;
-    font-size: 30px;
-    font-weight: bold;
-    box-shadow: 0 0 15px var(--link-top-color);;
-    opacity: 50%;
-    transition: ease-in opacity 175ms;
-}
-
-#link-top:hover {
-    opacity: 1;
 }

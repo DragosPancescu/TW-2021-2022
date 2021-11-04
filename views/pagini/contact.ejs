@@ -2,13 +2,31 @@
 <html lang="en">
 <head>
     <%- include("../fragmente/head.ejs") %>
+    <link rel="stylesheet" href="/Resources/Styles/contact_page.css">
     <title>Contact</title>
 </head>
 <body>
+
     <div id="container">
         <%- include("../fragmente/header.ejs") %>
 
-        <h2>Contact</h2>
+        <h2>Contact us!</h2>
+
+        <div class="form-style">
+            <form id="contact_form" method="POST">
+
+                <input type="text" id="first_name" name="firstname" placeholder="Prenumele..">
+            
+                <input type="text" id="last_name" name="lastname" placeholder="Numele..">
+
+                <input type="email" id="email" name="email" placeholder="E-mailul tau..">
+            
+                <textarea id="subject" name="subject" placeholder="Scrie-ne ceva.."></textarea>
+            
+                <input type="submit" value="Trimite">
+            
+            </form>
+        </div>
 
         <%- include("../fragmente/footer.ejs") %>
     </div>

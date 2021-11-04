@@ -5,6 +5,8 @@ const port = 8080;
 // Settings
 app.set("view engine", "ejs");
 app.use("/Resources", express.static(`${__dirname}/Resources`));
+app.use(express.json());
+app.use(express.urlencoded());
 
 
 // Route Handling
@@ -34,6 +36,17 @@ app.get("/*", (req, res) => {
             }
         res.send(rezRandare);
     });
+});
+
+app.post("/contact", (req, res) => {
+    if (req.body != null){
+        var res_text = "first_name: " + req.body.firstname +
+                        "\nlast_name: " + req.body.lastname +
+                        "\nemail: " + req.body.email +
+                        "\nsubject: " + req.body.subject;
+        console.log(res_text)
+    }
+    res.render("pagini/contact")
 });
 
 
