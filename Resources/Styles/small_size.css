@@ -12,20 +12,42 @@
         display: block;
     }
 
-    ul.main-menu>li:hover>ul{
-        display: flex;
-        flex-direction: column;
-        position: relative;
-        animation: pulse 400ms;
-        left: 7.2em;
-        top: -2.5em;
+    ul.main-menu{
+        width: 100%;
     }
 
     ul.main-menu li{
-        width: 7.2em;
+        width: 100%;
     }
 
     ul.main-menu li a, ul.main-menu li div {
-        width: 7.2em;
+        width: 100%;
     }
+
+    ul.main-menu>li li:hover>ul{
+        left: 0;
+        top: 0;
+        transform-origin: top;
+        animation: pulse 400ms forwards;
+    }
+
+    ul.main-menu~li li:hover>ul{
+        left: 0;
+        top: -2.5em;
+        animation: pulse 400ms forwards;
+    }
+
+    #acasa p {
+        display: none;
+    }
+
+    @keyframes pulse{
+        from {
+            transform: scale(0);
+        }
+        
+        to {
+            transform: scale(1);
+        }
+    }   
 }

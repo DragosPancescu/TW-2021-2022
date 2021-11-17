@@ -4,6 +4,8 @@
 <head>
     <%- include("../fragmente/head.ejs") %>
     <meta name="keywords" content="jocuri, retro, console, sega, nintendo">
+    <link rel="stylesheet" media="print" href="/Resources/Styles/css_printare.css" />
+    <link rel="stylesheet" href="/Resources/Styles/iframes.css">
     <title>Retro Point</title>
 </head>
 
@@ -37,9 +39,7 @@
                 </details>
             </div>
         </section>
-        
-        <hr>
-
+    
         <section id="livrare_returnare">
             <h2>Livrarea si returnarea produselor</h2>
 
@@ -89,8 +89,18 @@
             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nulla sapiente vero commodi ratione odit dolorum dicta ipsa amet dolore reprehenderit ipsum, corporis quibusdam provident deserunt ducimus perferendis labore aut. Itaque.
         </section>
 
-        <section id="lorem2">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nulla sapiente vero commodi ratione odit dolorum dicta ipsa amet dolore reprehenderit ipsum, corporis quibusdam provident deserunt ducimus perferendis labore aut. Itaque.
+        <section id="iframe-videos">
+            <div id="iframe-buttons">
+                <button type="button" class="iframe-btn" name="iframe1-btn">iframe1</button>
+                <button type="button" class="iframe-btn" name="iframe2-btn">iframe2</button>
+                <button type="button" class="iframe-btn" name="iframe3-btn">iframe3</button>
+            </div>
+
+            <div class="iframe-list">
+                <iframe src="https://www.youtube.com/embed/ab9tGLyJBRw" title="description1" id="iframe1"></iframe>
+                <iframe src="https://www.youtube.com/embed/3378FlHK4v0" title="description2" id="iframe2"></iframe>
+                <iframe src="https://www.youtube.com/embed/H5EUjnEKzjQ" title="description3" id="iframe3"></iframe>
+            </div>
         </section>
 
         <section id="lorem3">
@@ -126,6 +136,10 @@
                 <td>10:00 - 16:00</td>
             </tr>
         </table>
+
+        <div class="watermark">
+            <p>Pancescu Dragos</p>
+        </div>
 
         <%- include("../fragmente/footer.ejs") %>
     </div>

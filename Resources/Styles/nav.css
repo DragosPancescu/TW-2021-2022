@@ -1,8 +1,7 @@
 :root {
     --nav-text-color: #F7F6F2;
-    --nav-alt-text-color: #4B6587;
+    --nav-alt-text-color: #BED1EB;
     --nav-bg-color: #4B6587;
-    --nav-alt-bg-color: #F7F6F2;
 }
 
 #navigation {
@@ -29,7 +28,7 @@ ul.main-menu li{
     list-style-type: none;
     float: left;
     background-color: var(--nav-bg-color);
-    line-height: 2.2em;
+    line-height: 2.3em;
 }
 
 ul.main-menu{
@@ -44,7 +43,8 @@ ul.main-menu>li:hover>ul{
     display: flex;
     flex-direction: column;
     position: relative;
-    animation: pulse 400ms;
+    transform-origin: top;
+    animation: pulse 400ms forwards;
 }
 
 ul.main-menu>li li:hover>ul{
@@ -53,13 +53,12 @@ ul.main-menu>li li:hover>ul{
     position: relative;
     left: 100%;
     top: -100%;
-    animation: pulse 400ms;
+    transform-origin: left;
+    animation: pulse 400ms forwards;
 }
 
 ul.main-menu li:hover>div, ul.main-menu li:hover>a{
-    background-color: var(--nav-text-color);
-    color: var(--nav-bg-color);
-    animation: fade_in 400ms;
+    animation: fade_in 400ms forwards;
 }
 
 ul.main-menu li a, ul.main-menu li div {
@@ -72,6 +71,29 @@ ul.main-menu li a, ul.main-menu li div {
     height: 100%;
 }
 
+.fas.fa-home{
+    color: var(--nav-text-color);
+    font-size: 0.75em;
+}
+
+#acasa p {
+    color: var(--nav-bg-color);
+    margin-left: 10px;
+    display: inline;
+}
+
+ul.main-menu>li:hover .fas.fa-home{
+    animation: fade_in 400ms forwards;
+}
+
+ul.main-menu>li:hover p{
+    animation: appear 400ms forwards;
+}
+
+ul.main-menu>li p{
+    animation: disappear 600ms forwards;
+}
+
 .hamburger {
     display: none;
     position: fixed;
@@ -80,20 +102,24 @@ ul.main-menu li a, ul.main-menu li div {
     padding: 1em;
 }
 
+.fas.fa-bars {
+    padding: 5px
+}
+
 #activate-menu {
     display: none;
 }
 
-#activate-menu:checked ~ ul.main-menu{
+#activate-menu:checked~ul.main-menu{
     display: flex;
     flex-direction: column;
     position: relative;
     top: 2.5em;
-    animation: pulse 400ms;
+    animation: pulse 400ms forwards;
 }
 
 #activate-menu:checked .hamburger {
-    animation: pulse 400ms;
+    animation: pulse 400ms forwards;
 }
 
 @keyframes pulse{
@@ -108,12 +134,30 @@ ul.main-menu li a, ul.main-menu li div {
 
 @keyframes fade_in {
     from {
-        background-color: var(--nav-bg-color);
         color: var(--nav-text-color);
     }
     
     to {
-        background-color: var(--nav-alt-bg-color);
         color: var(--nav-alt-text-color);
     }
 }
+
+@keyframes appear {
+    from {
+        color: var(--nav-bg-color);
+    }
+
+    to {
+        color: var(--nav-alt-text-color);
+    }
+}
+
+@keyframes disappear {
+    from {
+        color: var(--nav-alt-text-color);
+    }
+
+    to {
+        color: var(--nav-bg-color);
+    }
+}   

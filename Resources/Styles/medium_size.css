@@ -1,13 +1,18 @@
-@media screen and (max-width: 800px) and (min-width: 500px){
+@media screen and (max-width: 831px) and (min-width: 500px){
+    ul.main-menu ul {
+        display: none;
+    }
+    
     #container {
         grid-template-areas: "gr-header gr-header"
                              "gr-despre gr-despre"
                              "gr-livrare-returnare gr-orar"
-                             "gr-lorem2 gr-lorem1"
-                             "gr-lorem2 gr-lorem3"
-                             "gr-lorem2 gr-lorem3"
+                             "gr-iframe-videos gr-lorem1"
+                             "gr-iframe-videos gr-lorem3"
+                             "gr-iframe-videos gr-lorem3"
                              "gr-lorem4 gr-date-utilizator"
                              "gr-footer gr-footer";
+                             
     }
 
     ul.main-menu li{
@@ -29,5 +34,13 @@
         height: 30px;
         width: 30px;
         font-size: 20px;
+    }
+
+    #acasa p {
+        display: none;
+    }
+
+    .fas.fa-home{
+        padding-top: 12px;
     }
 }

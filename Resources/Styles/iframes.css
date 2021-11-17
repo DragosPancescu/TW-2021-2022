@@ -1,0 +1,65 @@
+:root {
+    --border-color: #3D526E;
+    --text-color: #3D526E;
+    --btn-background-color: #C8C6C6;
+    --btn-alt-background-color: #F7F6F2;
+}
+
+#iframe-videos {
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: left;
+    width: fit-content;
+}
+
+#iframe-videos iframe {
+    border: 3px solid var(--border-color);
+    padding: 0;
+    margin: 0;
+}
+
+#iframe1 {
+    display: none;
+}
+
+#iframe2 {
+    display: block;
+}
+
+#iframe3 {
+    display: none;
+}
+
+#iframes-buttons {
+    display: flex;
+    flex-direction: row;
+    justify-content: right;
+}
+
+.iframe-btn {
+    border-radius: 0 0 10px 10px;
+    border-top: 4px solid var(--border-color);
+    border-right: 4px solid white;
+    border-left: 4px solid white;
+    border-bottom: 4px solid white;
+    color: var(--text-color);
+    background-color: var(--btn-background-color);
+    box-shadow: inset 0 0 6px var(--border-color);
+    height: 28px;
+    width: 70px;
+}
+
+.iframe-btn:hover {
+    background-color: var(--btn-alt-background-color);
+    animation: pulse-iframe-btn 650ms;
+}
+
+@keyframes pulse-iframe-btn{
+    from {
+        background-color: var(--btn-background-color);
+    }
+    
+    to {
+        background-color: var(--btn-alt-background-color);
+    }
+}

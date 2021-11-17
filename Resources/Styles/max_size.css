@@ -1,9 +1,9 @@
-@media screen and (max-width: 1000px) and (min-width: 800px){
+@media screen and (max-width: 1500px) and (min-width: 832px){
     #container {
         grid-template-areas: "gr-header gr-header gr-header gr-header"
                              "gr-despre gr-despre gr-despre gr-despre"
                              "gr-livrare-returnare  gr-orar gr-orar gr-lorem1"
-                             "gr-lorem2 gr-lorem2 gr-lorem2 gr-lorem2"
+                             "gr-iframe-videos gr-iframe-videos gr-iframe-videos gr-iframe-videos"
                              "gr-lorem3 gr-lorem3 gr-lorem4 date-utilizator"
                              "gr-footer gr-footer gr-footer gr-footer";
     }

@@ -1,0 +1,136 @@
+// sass Resources\Styles\Sass\nav.scss Resources\Styles\nav_scss.css
+
+// Global variables -> !! pentru css
+$nav-text-color: #F7F6F2;
+$nav-alt-text-color: #4B6587;
+$nav-bg-color: #4B6587;
+$nav-alt-bg-color: #F7F6F2;
+
+#navigation {
+    background-color: $nav-bg-color;
+    position: fixed;
+    height: 2.5em;
+    width: 100%;
+    top: 0;
+    right: 0;
+    text-align: left;
+    display: flex;
+    padding: 0;
+    margin: 0;
+
+    ul, li, a, div {
+        padding: 0;
+        margin: 0;
+    }
+
+    .main-menu {
+        float: right;
+
+        li {
+            box-sizing: border-box;
+            text-align: center;
+            width: 13em;
+            height: 2.5em;
+            list-style-type: none;
+            float: left;
+            background-color: $nav-bg-color;
+            line-height: 2.2em;
+
+            &:hover {
+                >div, >a {
+                    background-color: $nav-text-color;
+                    color: $nav-bg-color;
+                    animation: fade_in 400ms;
+                }
+            }
+
+            div, a {
+                text-decoration: none;
+                color: $nav-text-color;
+                font-size: 1.3em;
+                width: 12.5em;
+                display: block;
+                width: 10em;
+                height: 100%;
+            }
+        }
+
+        >li {
+            &:hover {
+                >ul {
+                    display: flex;
+                    flex-direction: column;
+                    position: relative;
+                    animation: pulse 400ms;
+                }
+            }
+            
+            li {
+                &:hover {
+                    >ul {
+                        display: flex;
+                        flex-direction: column;
+                        position: relative;
+                        left: 100%;
+                        top: -100%;
+                        animation: pulse 400ms;
+                    }
+                }
+            }
+        }
+
+        ul {
+            display: none;
+        }
+    }
+
+    .hamburger {
+        display: none;
+        position: fixed;
+        color: $nav-text-color;
+        font-size: 2em;
+        padding: 1em;
+    }
+
+    #activate-menu {
+        display: none;
+
+        &:checked {
+            ~ul {
+                &.main-menu {
+                    display: flex;
+                    flex-direction: column;
+                    position: relative;
+                    top: 2.5em;
+                    animation: pulse 400ms;
+                }
+            }
+
+            .hamburger {
+                animation: pulse 400ms;
+            }
+        }
+    }
+}
+
+@keyframes pulse{
+    from {
+        transform: scale(0);
+    }
+    
+    to {
+        transform: scale(1);
+    }
+}
+
+@keyframes fade_in {
+    from {
+        background-color: $nav-bg-color;
+        color: $nav-text-color;
+    }
+    
+    to {
+        background-color: $nav-alt-bg-color;
+        color: $nav-alt-text-color;
+    }
+}
