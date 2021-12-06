@@ -90,10 +90,6 @@ ul.main-menu>li:hover p{
     animation: appear 400ms forwards;
 }
 
-ul.main-menu>li p{
-    animation: disappear 600ms forwards;
-}
-
 .hamburger {
     display: none;
     position: fixed;
@@ -151,13 +147,3 @@ ul.main-menu>li p{
         color: var(--nav-alt-text-color);
     }
 }
-
-@keyframes disappear {
-    from {
-        color: var(--nav-alt-text-color);
-    }
-
-    to {
-        color: var(--nav-bg-color);
-    }
-}   

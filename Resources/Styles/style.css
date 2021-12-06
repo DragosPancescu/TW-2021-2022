@@ -1,6 +1,7 @@
 :root {
     --h1-color: #3D526E;
     --h1-bg-color: #C8C6C6;
+    --grids-bg-color: #C8C6C6;
     --h1-font-size: 60px;
 }
 
@@ -12,6 +13,7 @@
                          "gr-iframe-videos gr-iframe-videos gr-iframe-videos gr-iframe-videos"
                          "gr-lorem3 gr-lorem3 gr-lorem4 gr-date-utilizator"
                          "gr-footer gr-footer gr-footer gr-footer";
+    gap: 10px;
 }
 
 #despre {
@@ -22,6 +24,7 @@
     font-size: 1.2em;
     padding: 1em;
     text-align: justify;
+    background-color: var(--grids-bg-color);
 }
 
 #despre h2{
@@ -63,36 +66,43 @@
 #livrare_returnare {
     grid-area: gr-livrare-returnare;
     padding: 1em;
+    background-color: var(--grids-bg-color);
 }
 
 #lorem1 {
     grid-area: gr-lorem1;
     padding: 1em;
+    background-color: var(--grids-bg-color);
 }
 
 #iframe-videos {
     grid-area: gr-iframe-videos;
     padding: 1em;
+    background-color: var(--grids-bg-color);
 }
 
 #lorem3 {
     grid-area: gr-lorem3;
     padding: 1em;
+    background-color: var(--grids-bg-color);
 }
 
 #lorem4 {
     grid-area: gr-lorem4;
     padding: 1em;
+    background-color: var(--grids-bg-color);
 }
 
 #date-utilizator {
     grid-area: gr-date-utilizator;
     padding: 1em;
+    background-color: var(--grids-bg-color);
 }
 
 #orar {
     grid-area: gr-orar;
     padding: 1em;
+    background-color: var(--grids-bg-color);
 }
 
 header {
@@ -118,15 +128,4 @@ h1 {
 
 .watermark {
     display: none;
-    text-align: center;
-    justify-content: center;
-    line-height: 1cm;
-    position: fixed;
-    bottom: 0;
-    right: 0;
-    user-select: none;
-    width: 100px;
-    height: 2cm;
-    border: 3px double black;
-    opacity: 0.65;
 }

@@ -1,6 +1,6 @@
 const express = require("express");
 const app = express();
-const port = 8080;
+const port = process.env.Port || 8080;
 
 // Settings
 app.set("view engine", "ejs");

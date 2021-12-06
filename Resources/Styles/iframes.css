@@ -30,9 +30,9 @@
     display: none;
 }
 
-#iframes-buttons {
+#iframe-buttons {
     display: flex;
-    flex-direction: row;
+    flex-direction: row-reverse;
     justify-content: right;
 }
 

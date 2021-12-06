@@ -1,3 +1,4 @@
+/* Page break pe static sau relative*/
 
 #navigation, img, video, #link-top{
     display: none;
@@ -15,11 +16,13 @@ h1 {
     font-size: calc(var(--h1-font-size) * 2.5);
 }
 
-html, body, .main, #container {
+* {
     float: none; 
 }
 
-header {
+#top {
+    align-items: center;
+    justify-content: center;
     page-break-after: always;
 }
 
@@ -29,6 +32,22 @@ footer {
 
 .watermark {
     display: flex;
+    text-align: center;
+    justify-content: center;
+    line-height: 1cm;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    user-select: none;
+    width: 100px;
+    height: 2cm;
+    border: 3px double black;
+    opacity: 0.65;
+    z-index: 100;
+}
+
+#iframe-videos, #iframe-buttons, .iframe-list {
+    display: none;
 }
 
 @page :left {
