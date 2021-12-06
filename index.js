@@ -1,6 +1,7 @@
 const express = require("express");
 const app = express();
 const port = process.env.Port || 8080;
+const host = '0.0.0.0';
 
 // Settings
 app.set("view engine", "ejs");
@@ -62,6 +63,6 @@ app.post("/contact", (req, res) => {
 
 
 // Starting the server
-app.listen(port, () => {
+app.listen(port, host, () => {
     console.log("Server started on port: ", port);
 });
