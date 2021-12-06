@@ -8,6 +8,17 @@ app.use("/Resources", express.static(`${__dirname}/Resources`));
 app.use(express.json());
 app.use(express.urlencoded());
 
+const {Client} = require("pg");
+
+const client = new Client({    
+    user: 'uhebvejjawfhtj',    
+    password: '6d82ec355b0c9130d07913dd3e6b33ac0f0058edbc3e021d9e92142e63fffb5d',    
+    database: 'd30g89385ru53p',    
+    host: 'ec2-3-230-219-251.compute-1.amazonaws.com',    
+    port: 5432
+});
+
+
 
 // Route Handling
 app.get(["/", "/index"], (req, res) => {
