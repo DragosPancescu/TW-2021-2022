@@ -1,5 +1,8 @@
+const { json } = require("express");
 const express = require("express");
 const app = express();
+const fs = require('fs');
+const sharp = require('sharp');
 const port = process.env.Port || 8080;
 const host = '0.0.0.0';
 
@@ -23,10 +26,22 @@ const client = new Client({   
 
 // Route Handling
 app.get(["/", "/index"], (req, res) => {
-    res.render("pagini/index", {ip: req.ip});
+
+    // handle galerie
+    var buf = fs.readFileSync(`${__dirname}/Resources/Json/galerie.json`).toString("utf-8");
+    obImagini = JSON.parse(buf)
+
+    // resize images
+    for (let imag in obImagini.imagini){
+        let aux = imag.cale_imagine.split(".");
+        let nume_imag = aux[0];
+        let extensie = aux[1];
+    }
+
+    res.render("pagini/index", {ip: req.ip, images:obImagini.imagini, cale_galerie:obImagini.cale_galerie});
 });
 
-// Rute forbidden
+// Route forbidden
 app.get("/*.ejs", (req, res) => {
     res.status(403).render("pagini/error_page", {error_type: 403});
 });

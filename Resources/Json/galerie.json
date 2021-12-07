@@ -1,7 +1,54 @@
 {
-    "cale_galerie": "Resources/Images/Galerie",
-    "imagini": {
-        
-    }
+    "cale_galerie": "Resources/Images/Galerie/",
+    "imagini": [
+        {
+            "cale_imagine":"3ds.jpg",
+            "titlu":"Consola 3ds",
+            "descriere":"Poza cu o consola nintendo new 3ds",
+            "sfert_ora":"1"
+        },
+        {
+            "cale_imagine":"advance-sp.jpg",
+            "titlu":"Consola advance sp",
+            "descriere":"Poza cu o consola nintendo gameboy advance sp",
+            "sfert_ora":"1"
+        },
+        {
+            "cale_imagine":"color.jpg",
+            "titlu":"Consola gameboy color",
+            "descriere":"Poza cu o consola nintendo gameboy color",
+            "sfert_ora":"2"
+        },
+        {
+            "cale_imagine":"dmg.jpg",
+            "titlu":"Consola gameboy",
+            "descriere":"Poza cu o consola nintendo gameboy",
+            "sfert_ora":"2"
+        },
+        {
+            "cale_imagine":"ds-lite.jpg",
+            "titlu":"Consola ds-lite",
+            "descriere":"Poza cu o consola nintendo ds-lite",
+            "sfert_ora":"3"
+        },
+        {
+            "cale_imagine":"n64.jpg",
+            "titlu":"Mansete n64",
+            "descriere":"Poza cu o 2 mansete n64",
+            "sfert_ora":"3"
+        },
+        {
+            "cale_imagine":"nes.jpg",
+            "titlu":"Consola nes",
+            "descriere":"Poza cu o consola nintendo nes",
+            "sfert_ora":"4"
+        },
+        {
+            "cale_imagine":"pocket.jpg",
+            "titlu":"Consola gameboy pocket",
+            "descriere":"Poza cu o consola nintendo gameboy pocket",
+            "sfert_ora":"4"
+        }
+    ]
     
 }

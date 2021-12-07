@@ -12,6 +12,7 @@
                          "gr-livrare-returnare  gr-orar gr-orar gr-lorem1"
                          "gr-iframe-videos gr-iframe-videos gr-iframe-videos gr-iframe-videos"
                          "gr-lorem3 gr-lorem3 gr-lorem4 gr-date-utilizator"
+                         "gr-galerie-statica gr-galerie-statica gr-galerie-statica gr-galerie-statica"
                          "gr-footer gr-footer gr-footer gr-footer";
     gap: 10px;
 }
@@ -101,6 +102,12 @@
 
 #orar {
     grid-area: gr-orar;
+    padding: 1em;
+    background-color: var(--grids-bg-color);
+}
+
+#galerie-statica {
+    grid-area: gr-galerie-statica;
     padding: 1em;
     background-color: var(--grids-bg-color);
 }
