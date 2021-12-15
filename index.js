@@ -14,31 +14,84 @@ app.use(express.urlencoded());
 
 const {Client} = require("pg");
 
-const client = new Client({    
-    user: 'uhebvejjawfhtj',    
-    password: '6d82ec355b0c9130d07913dd3e6b33ac0f0058edbc3e021d9e92142e63fffb5d',    
-    database: 'd30g89385ru53p',    
-    host: 'ec2-3-230-219-251.compute-1.amazonaws.com',    
+const client = new Client({
+    user: 'uhebvejjawfhtj', 
+    password: '6d82ec355b0c9130d07913dd3e6b33ac0f0058edbc3e021d9e92142e63fffb5d',
+    database: 'd30g89385ru53p', 
+    host: 'ec2-3-230-219-251.compute-1.amazonaws.com', 
     port: 5432
 });
 
+function createImages(){
+    // Handle gallery
+    var buf = fs.readFileSync(`${__dirname}/Resources/Json/galerie.json`).toString("utf-8");
+    obImagini = JSON.parse(buf);
 
+    // Resize images
+    obImagini.imagini.forEach(imag => {
+        var nume_imag;
+        [nume_imag, ]= imag.cale_imagine.split('.');
+        
+        let dim_mic = 150;
+        let dim_mediu = 250;
+
+        imag.mic = `/${obImagini.cale_galerie}/Small/${nume_imag}-mic.webp`;
+        imag.mediu = `/${obImagini.cale_galerie}/Medium/${nume_imag}-mediu.webp`;
+        imag.mare = `/${obImagini.cale_galerie}/${imag.cale_imagine}`;
+
+        console.log(imag.mic)
+        
+        // If file exists dont create it
+        if (!fs.existsSync(`${__dirname}${imag.mic}`)) {
+            sharp(`${__dirname}${imag.mare}`).resize(dim_mic).toFile(`${__dirname}${imag.mic}`);
+        }
+
+        // If file exists dont create it
+        if (!fs.existsSync(`${__dirname}${imag.mediu}`)) {
+            sharp(`${__dirname}${imag.mare}`).resize(dim_mediu).toFile(`${__dirname}${imag.mediu}`);
+        }
+
+    });
+    console.log("Done with processing gallery images");
+}
+
+createImages();
 
 // Route Handling
 app.get(["/", "/index"], (req, res) => {
+    res.render("pagini/index", {ip: req.ip, images:obImagini.imagini, cale_galerie:obImagini.cale_galerie});
+});
 
-    // handle galerie
-    var buf = fs.readFileSync(`${__dirname}/Resources/Json/galerie.json`).toString("utf-8");
-    obImagini = JSON.parse(buf)
+app.get(["/galerii"], (req, res) => {
 
-    // resize images
-    for (let imag in obImagini.imagini){
-        let aux = imag.cale_imagine.split(".");
-        let nume_imag = aux[0];
-        let extensie = aux[1];
+    // Generate odd number between 5 and 11
+    var max = 12;
+    var min = 5;
+    var numar_imagini = Math.floor(Math.random() * (max - min + 1)) + min;
+    if (numar_imagini % 2 == 0) {
+        if (numar_imagini == 12){
+            numar_imagini -= 1;
+        } else {
+            numar_imagini += 1;
+        }
     }
 
-    res.render("pagini/index", {ip: req.ip, images:obImagini.imagini, cale_galerie:obImagini.cale_galerie});
+    console.log(`animated gallery number of images: ${numar_imagini}`)
+
+    // Select last numar_imagini from the images list
+    var imagesAnimate = [];
+    for (i=obImagini.imagini.length - 1; i >= 0; i--){
+        imagesAnimate.push(obImagini.imagini[i]);
+
+        if (i == obImagini.imagini.length - 1 - numar_imagini){
+            break;
+        }
+    }
+
+    // Compile sass
+
+
+    res.render("pagini/galerii", {animated_images:imagesAnimate, images:obImagini.imagini, cale_galerie:obImagini.cale_galerie});
 });
 
 // Route forbidden

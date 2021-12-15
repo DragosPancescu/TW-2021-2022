@@ -1,0 +1,110 @@
+@media screen and (max-width: 831px) and (min-width: 516px) {
+  #container-galerie-animata {
+    display: none;
+  }
+}
+@media screen and (max-width: 516px) {
+  #container-galerie-animata {
+    display: none;
+  }
+}
+#container-galerie-animata {
+  position: relative;
+  width: 400px;
+  height: 300px;
+}
+#container-galerie-animata figure:nth-of-type(1) {
+  animation-delay: 18s;
+}
+#container-galerie-animata figure:nth-of-type(2) {
+  animation-delay: 15s;
+}
+#container-galerie-animata figure:nth-of-type(3) {
+  animation-delay: 12s;
+}
+#container-galerie-animata figure:nth-of-type(4) {
+  animation-delay: 9s;
+}
+#container-galerie-animata figure:nth-of-type(5) {
+  animation-delay: 6s;
+}
+#container-galerie-animata figure:nth-of-type(6) {
+  animation-delay: 3s;
+}
+#container-galerie-animata figure:nth-of-type(7) {
+  animation-delay: 0s;
+}
+#container-galerie-animata figure {
+  z-index: 0;
+  position: absolute;
+  left: 0;
+  top: 0;
+  animation-name: gal_exemplu;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-fill-mode: forwards;
+  animation-duration: 21s;
+  transform-origin: center;
+  width: 400px;
+  height: 300px;
+  border: 7px solid transparent;
+  border-image: url(/Resources/Images/border.jpg) 30 round;
+}
+#container-galerie-animata figure:hover {
+  animation-play-state: paused;
+}
+#container-galerie-animata figcaption {
+  position: absolute;
+  bottom: 0;
+  background: lightgray;
+  width: 100%;
+  height: 20px;
+  text-align: center;
+}
+
+@keyframes gal_exemplu {
+  0% {
+    z-index: 10;
+    opacity: 1;
+  }
+  /*perioada 0-5% in care se afiseaza fara efect */
+  7.142857% {
+    clip-path: circle(100%);
+  }
+  12% {
+    opacity: 1;
+    transform: rotate(0deg);
+  }
+  /* de  aici doresc sa descresc si opacitatea;*/
+  14.285714% {
+    z-index: 10;
+    opacity: 0;
+    clip-path: circle(0%);
+    transform: rotate(360deg);
+  }
+  14.285715% {
+    z-index: -10;
+    clip-path: circle(100%);
+    transform: rotate(0deg);
+  }
+  /* il ascund cat mai in spate sa nu vina peste imaginile care erau mai sus in html decat el*/
+  85.714287% {
+    opacity: 0;
+    clip-path: circle(100%);
+    z-index: -10;
+    transform: rotate(0deg);
+  }
+  85.714288% {
+    z-index: 0;
+  }
+  /*setez z-index la 0 ca sa revina la ordinea normala de afisare*/
+  100% {
+    opacity: 1;
+    z-index: 0;
+  }
+}
+footer {
+  margin-top: 250px;
+}
+
+/*# sourceMappingURL=galerie_animata.css.map */

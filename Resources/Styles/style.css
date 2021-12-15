@@ -106,7 +106,7 @@
     background-color: var(--grids-bg-color);
 }
 
-#galerie-statica {
+#static-gallery {
     grid-area: gr-galerie-statica;
     padding: 1em;
     background-color: var(--grids-bg-color);

@@ -1,9 +1,10 @@
-@media screen and (max-width: 831px) and (min-width: 500px){
+@media screen and (max-width: 831px) and (min-width: 515px){
     ul.main-menu ul {
         display: none;
     }
     
     #container {
+        grid-template-columns: repeat(2, 1fr);
         grid-template-areas: "gr-header gr-header"
                              "gr-despre gr-despre"
                              "gr-livrare-returnare gr-orar"
@@ -11,6 +12,7 @@
                              "gr-iframe-videos gr-lorem3"
                              "gr-iframe-videos gr-lorem3"
                              "gr-lorem4 gr-date-utilizator"
+                             "gr-galerie-statica gr-galerie-statica"
                              "gr-footer gr-footer";
                              
     }

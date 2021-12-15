@@ -1,17 +1,17 @@
 {
-    "cale_galerie": "Resources/Images/Galerie/",
+    "cale_galerie": "Resources/Images/Galerie",
     "imagini": [
         {
             "cale_imagine":"3ds.jpg",
             "titlu":"Consola 3ds",
             "descriere":"Poza cu o consola nintendo new 3ds",
-            "sfert_ora":"1"
+            "sfert_ora":"2"
         },
         {
             "cale_imagine":"advance-sp.jpg",
             "titlu":"Consola advance sp",
             "descriere":"Poza cu o consola nintendo gameboy advance sp",
-            "sfert_ora":"1"
+            "sfert_ora":"2"
         },
         {
             "cale_imagine":"color.jpg",
@@ -29,25 +29,43 @@
             "cale_imagine":"ds-lite.jpg",
             "titlu":"Consola ds-lite",
             "descriere":"Poza cu o consola nintendo ds-lite",
-            "sfert_ora":"3"
+            "sfert_ora":"2"
         },
         {
             "cale_imagine":"n64.jpg",
             "titlu":"Mansete n64",
-            "descriere":"Poza cu o 2 mansete n64",
-            "sfert_ora":"3"
+            "descriere":"Poza cu 2 mansete n64",
+            "sfert_ora":"2"
         },
         {
             "cale_imagine":"nes.jpg",
             "titlu":"Consola nes",
             "descriere":"Poza cu o consola nintendo nes",
-            "sfert_ora":"4"
+            "sfert_ora":"2"
         },
         {
             "cale_imagine":"pocket.jpg",
             "titlu":"Consola gameboy pocket",
             "descriere":"Poza cu o consola nintendo gameboy pocket",
-            "sfert_ora":"4"
+            "sfert_ora":"2"
+        },
+        {
+            "cale_imagine":"gameboy-advance.jpg",
+            "titlu":"Consola gameboy advance",
+            "descriere":"Poza cu o consola nintendo gameboy advance",
+            "sfert_ora":"2"
+        },
+        {
+            "cale_imagine":"gamecube.jpg",
+            "titlu":"Consola gamecube",
+            "descriere":"Poza cu o consola nintendo gamecube",
+            "sfert_ora":"2"
+        },
+        {
+            "cale_imagine":"gameboy-micro.jpg",
+            "titlu":"Consola gameboy micro",
+            "descriere":"Poza cu o consola nintendo gameboy micro",
+            "sfert_ora":"2"
         }
     ]
     

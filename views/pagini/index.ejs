@@ -6,6 +6,7 @@
     <meta name="keywords" content="jocuri, retro, console, sega, nintendo">
     <link rel="stylesheet" media="print" href="/Resources/Styles/css_printare.css" />
     <link rel="stylesheet" href="/Resources/Styles/iframes.css">
+    <link rel="stylesheet" href="/Resources/Styles/galerie_statica.css">
     <title>Retro Point</title>
 </head>
 
@@ -114,13 +115,11 @@
         <section id="date-utilizator">
             Your public IP is <%- ip %>
         </section>
-
-        <section id="galerie-statica">
-            <%- include("../fragmente/galerie.ejs") %>
-        </section>
-
         
-
+        <section id="static-gallery">
+            <%- include("../fragmente/galerie_statica.ejs") %>
+        </section>
+        
         <table id="orar">
             <tr>
                 <th>Luni</th>

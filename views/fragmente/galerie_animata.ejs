@@ -1,0 +1,11 @@
+<h2 id="header-galerie">Galerie Animata</h2>
+<div id=container-galerie-animata>
+    <div>
+        <% for (let image of locals.animated_images) { %>
+            <figure>
+                <img class="gallery_image" src="<%- image.mare %>" alt="<%- image.descriere %>">
+                <figcaption><%- image.titlu %></figcaption>
+            </figure>
+        <% } %>
+    </div>
+</div>

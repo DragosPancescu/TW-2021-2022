@@ -1,0 +1,20 @@
+<h2 id="header-galerie">Galerie Statica</h2>
+<div id=grid-galerie>
+    <% for (var i=0; i<locals.images.length; i++) {
+        if (i == 10) {
+            break;
+        }
+
+        var data_curenta = new Date()
+        if (data_curenta.getMinutes() >= (locals.images[i].sfert_ora - 1) * 15 && data_curenta.getMinutes() < (locals.images[i].sfert_ora) * 15) { %>
+            <figure>
+                <picture>
+                    <source class="gallery_image" srcset="<%- locals.images[i].mic %>" media="(max-width:500px)">
+                    <source class="gallery_image" srcset="<%- locals.images[i].mediu %>" media="(min-width:501px)">
+                    <img class="gallery_image" src="<%- locals.images[i].mare %>" alt="<%- locals.images[i].descriere %>">
+                </picture>
+                <figcaption><%- locals.images[i].titlu %></figcaption>
+            </figure>
+        <% } %>
+    <% } %>
+</div>

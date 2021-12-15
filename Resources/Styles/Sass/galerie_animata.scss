@@ -1,0 +1,74 @@
+$phone: 516px; 
+$tablet: 832px; 
+         
+@media screen and (max-width: ($tablet - 1)) and (min-width: $phone) {
+    #container-galerie-animata{
+        display: none;
+    }
+}
+
+@media screen and (max-width: $phone) {
+    #container-galerie-animata{
+        display: none;
+    }
+}
+
+$numar_imagini: 7 !default;
+
+#container-galerie-animata {
+    position: relative;
+    width: 400px;
+    height: 300px;
+
+    @for $i from 1 through $numar_imagini {
+        figure:nth-of-type(#{$i}) {
+            animation-delay: ($numar_imagini - $i) * 3s;
+        }
+    }
+
+    figure {
+        z-index: 0;
+        position: absolute;
+        left: 0;
+        top: 0;
+        animation-name: gal_exemplu;
+	    animation-timing-function: linear;
+	    animation-iteration-count: infinite;
+	    animation-fill-mode: forwards;
+	    animation-duration: $numar_imagini * 3s;	
+	    transform-origin:center;
+        width: 400px;
+        height: 300px;
+        border: 7px solid transparent;
+        border-image: url(/Resources/Images/border.jpg) 30 round;
+
+        &:hover {
+            animation-play-state: paused;
+        }
+    }
+
+    figcaption {
+        position: absolute;
+        bottom: 0;
+        background: lightgray;
+	    width: 100%;
+        height: 20px;
+	    text-align: center;
+    }
+}
+
+@keyframes gal_exemplu{ 
+	0% {z-index:10;opacity:1;} /*perioada 0-5% in care se afiseaza fara efect */
+	7.142857% {clip-path: circle(100%);}
+	12%{opacity:1;transform: rotate(0deg);} /* de  aici doresc sa descresc si opacitatea;*/
+	14.285714%{z-index:10;opacity:0;clip-path: circle(0%); transform: rotate(360deg);}
+	14.285715%{z-index:-10; clip-path: circle(100%); transform: rotate(0deg);}/* il ascund cat mai in spate sa nu vina peste imaginile care erau mai sus in html decat el*/
+	
+	85.714287%{opacity:0;clip-path: circle(100%);z-index:-10; transform: rotate(0deg);}	
+	85.714288%{z-index:0;}/*setez z-index la 0 ca sa revina la ordinea normala de afisare*/
+	100%{opacity:1;z-index:0;}
+}
+
+footer {
+    margin-top: 250px;
+}

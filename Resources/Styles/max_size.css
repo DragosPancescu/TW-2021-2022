@@ -1,10 +1,12 @@
 @media screen and (max-width: 1500px) and (min-width: 832px){
     #container {
+        grid-template-columns: repeat(4, 1fr);
         grid-template-areas: "gr-header gr-header gr-header gr-header"
                              "gr-despre gr-despre gr-despre gr-despre"
                              "gr-livrare-returnare  gr-orar gr-orar gr-lorem1"
                              "gr-iframe-videos gr-iframe-videos gr-iframe-videos gr-iframe-videos"
                              "gr-lorem3 gr-lorem3 gr-lorem4 date-utilizator"
+                             "gr-galerie-statica gr-galerie-statica gr-galerie-statica gr-galerie-statica"
                              "gr-footer gr-footer gr-footer gr-footer";
     }
 }
